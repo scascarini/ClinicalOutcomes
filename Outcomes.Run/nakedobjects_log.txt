@@ -1,0 +1,3 @@
+ERROR 11 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext
+ERROR 5 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext
