@@ -16,7 +16,7 @@ public class CorsConfig {
         // from the http://foo.com origin.
 
         corsConfig.ForResources("RestfulObjects").
-            ForOrigins("http://localhost:5001").
+           ForOrigins("http://clinicaloutcomesclient.azurewebsites.net", "https://clinicaloutcomesclient.azurewebsites.net").
            AllowAll().
            AllowResponseHeaders("Warning", "Set-Cookie", "ETag").
            AllowCookies();
