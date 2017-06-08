@@ -4,7 +4,7 @@ using Template.Model;
 
 namespace Template.SeedData
 {
-    public class OutcomesDbInitializer : DropCreateDatabaseAlways<OutcomesDbContext> {
+    public class OutcomesDbInitializer : DropCreateDatabaseIfModelChanges<OutcomesDbContext> {
         protected override void Seed(OutcomesDbContext context) {
             var h1 = new Hospital { Name = "St Elsewhere" };
             var h2 = new Hospital { Name = "St Somewhere" };

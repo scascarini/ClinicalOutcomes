@@ -62,7 +62,7 @@ namespace NakedObjects.Template {
         public static EntityObjectStoreConfiguration EntityObjectStoreConfig()
         {
             var config = new EntityObjectStoreConfiguration();
-            config.UsingCodeFirstContext(() => new OutcomesDbContext("NakedObjectsTemplate", new OutcomesDbInitializer()));
+            config.UsingCodeFirstContext(() => new OutcomesDbContext("ClinicalOutcomes", new OutcomesDbInitializer()));
             return config;
         }
 
