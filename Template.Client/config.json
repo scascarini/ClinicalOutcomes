@@ -1,7 +1,7 @@
 {
-    "authenticate": false,
-    "authClientId": "5xMMFaiZ8lnBTRZexsDcooZAfbP1IJB8",
-    "authDomain": "nakedobjectsdemo.eu.auth0.com",
+    "authenticate": true,
+    "authClientId": "KcJsbXVsZN20p8dxdKuqQiJKbfkrjjXc",
+    "authDomain": "clientoutcomes.eu.auth0.com",
     "applicationName": "Clinical Outcomes",
     "appPath": "https://clinicaloutcomesserver.azurewebsites.net/rest",
     "colors": {
