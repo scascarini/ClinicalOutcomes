@@ -10,6 +10,8 @@ using System.Web.Routing;
 using NakedObjects.Rest;
 using NakedObjects.Rest.Media;
 using System;
+using System.Web.Configuration;
+using NakedObjects.Template.App_Start;
 
 namespace NakedObjects.Template {
     public class RestfulObjectsConfig {
@@ -26,6 +28,15 @@ namespace NakedObjects.Template {
                 GlobalConfiguration.Configuration.Formatters.Insert(0, new JsonNetFormatter(null));
                 //GlobalConfiguration.Configuration.MessageHandlers.Add(new AccessControlExposeHeadersHandler());
                 //GlobalConfiguration.Configuration.MessageHandlers.Add(new BasicAuthenticationHandler());
+
+                var clientID = WebConfigurationManager.AppSettings["auth0:ClientId"];
+                var clientSecret = WebConfigurationManager.AppSettings["auth0:ClientSecret"];
+
+                GlobalConfiguration.Configuration.MessageHandlers.Add(new JsonWebTokenValidationHandler() {
+                    Audience = clientID,
+                    SymmetricKey = clientSecret,
+                    IsSecretBase64Encoded = false
+                });
             }
         }
 
